@@ -1,1 +1,57 @@
-venv
+# Python Byte-Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer Logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit Test / Coverage Reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code Settings
+.vscode/
+*.code-workspace
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary Files
+*.swp
+*.swo
+*.tmp

@@ -9,7 +9,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 1. [Project 1: Mad Libs Game](#project-1-mad-libs-game)
 2. [Project 2: Number Guessing Game](#project-2-number-guessing-game)
 3. [Project 3: Dice Simulator](#project-3-dice-simulator)
-4. [Project 4: TBD](#project-4-tbd)
+4. [Project 4: Hangman Game](#project-4-hangman-game)
 5. [Project 5: TBD](#project-5-tbd)
 6. [Project 6: TBD](#project-6-tbd)
 7. [Project 7: TBD](#project-7-tbd)
@@ -39,6 +39,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 
 
 ## Project 1: Mad Libs Game
+[Back to Top](#table-of-contents)
 
 ### Description
 
@@ -87,6 +88,7 @@ The game will display a story using the words you provided.
 **Completed on**: Sunday, July 14th, 2024  
 
 ## Project 2: Number Guessing Game
+[Back to Top](#table-of-contents)
 
 ### Description
 
@@ -134,6 +136,7 @@ and indicate whether the guess was too high, too low, or correct.
 **Completed on**: Sunday, July 14th, 2024  
 
 ## Project 3: Dice Simulator
+[Back to Top](#table-of-contents)
 
 ### Description
 
@@ -174,6 +177,57 @@ rolls, and the total (sum) of the rolls. Type 'exit' to quit the game.
 - Continuous play option.
 
 **Completed on**: Monday, July 15th, 2024 
+
+## Project 4: Hangman Game
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Hangman game is a classic word-guessing game where the player tries to guess the letters of a randomly selected
+word. The player has a limited number of attempts to guess the word correctly. The game displays the word with
+underscores representing the letters that have not been guessed yet. The player wins if they guess all the letters
+in the word before running out of attempts and loses if they run out of attempts before guessing the word. 
+
+The game provides feedback after each guess, indicating whether the guessed letter is correct or incorrect. Correct
+guesses reveal the position of the letter in the word, while incorrect guesses reduce the number of attempts 
+remaining. The game ends when the player wins or loses, and the final result is displayed. The player can choose
+to play again or exit the game.
+
+**Key Learning Points**
+- Implementing word-guessing game logic. 
+- Handling user inputs and validation. 
+- Managing game state and user feedback.
+
+### Technologies
+- Python
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/hangman
+    ```
+2. Install required dependencies (if applicable):
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to guess the letters of the word. The game will provide feedback after
+each guess, indicating whether the letter is correct or incorrect. The player can choose to play again
+after each game session.
+
+### Features
+- Random word selection from a list. 
+- Input validation for single letters. 
+- Display of word state and guessed letters. 
+- Option to play again after each game.
+
+**Completed on**: Monday, July 15th, 2024
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

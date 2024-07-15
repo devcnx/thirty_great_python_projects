@@ -1,0 +1,2 @@
+DICE_RANGE = (1, 6)
+DEFAULT_ROLLS = 2

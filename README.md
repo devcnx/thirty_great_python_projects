@@ -8,7 +8,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 
 1. [Project 1: Mad Libs Game](#project-1-mad-libs-game)
 2. [Project 2: Number Guessing Game](#project-2-number-guessing-game)
-3. [Project 3: TBD](#project-3-tbd)
+3. [Project 3: Dice Simulator](#project-3-dice-simulator)
 4. [Project 4: TBD](#project-4-tbd)
 5. [Project 5: TBD](#project-5-tbd)
 6. [Project 6: TBD](#project-6-tbd)
@@ -131,7 +131,49 @@ and indicate whether the guess was too high, too low, or correct.
 - Feedback messages for each guess. 
 - Option to play again after winning or losing.  
 
-**Completed on**: Sunday, July 14th, 2024   
+**Completed on**: Sunday, July 14th, 2024  
+
+## Project 3: Dice Simulator
+
+### Description
+
+The Dice Simulator allows the user to roll a specified number of dice and get random results for each roll. For each roll,
+the total (sum) of the dice are displayed to the user. This simulation mimics the rolls of physical dice, providing
+practice working with random numbers and user input.
+
+**Key Learning Points**
+- Generating random numbers.
+- Handling user inputs and validation.
+- Creating a loop for continuous user interaction.
+
+### Technologies
+- Python
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/dice_simulator
+    ```
+2. Install required dependencies (if applicable):
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to enter the number of dice to roll. The game will display the results of the dice
+rolls, and the total (sum) of the rolls. Type 'exit' to quit the game.
+
+### Features
+- Random dice roll generation.
+- User-friendly interface with input validation. 
+- Continuous play option.
+
+**Completed on**: Monday, July 15th, 2024 
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

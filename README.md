@@ -10,7 +10,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 2. [Project 2: Number Guessing Game](#project-2-number-guessing-game)
 3. [Project 3: Dice Simulator](#project-3-dice-simulator)
 4. [Project 4: Hangman Game](#project-4-hangman-game)
-5. [Project 5: TBD](#project-5-tbd)
+5. [Project 5: Rock, Paper, Scissors Game](#project-5-rock-paper-scissors-game)
 6. [Project 6: TBD](#project-6-tbd)
 7. [Project 7: TBD](#project-7-tbd)
 8. [Project 8: TBD](#project-8-tbd)
@@ -228,6 +228,53 @@ after each game session.
 - Option to play again after each game.
 
 **Completed on**: Monday, July 15th, 2024
+
+## Project 5: Rock, Paper, Scissors Game
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Rock, Paper, Scissors game is a classic hand game played between two people. The player competes against the computer by choosing one of the three options: Rock, Paper, or Scissors. The computer also randomly selects one of the three choices. The winner is determined based on the following rules:
+- Rock beats Scissors
+- Scissors beats Paper
+- Paper beats Rock
+
+The game provides feedback on the outcome of each round and allows the player to play multiple rounds.
+
+**Key Learning Points**
+- Implementing game logic for Rock, Paper, Scissors.
+- Handling user inputs and validation.
+- Generating random choices for the computer.
+
+### Technologies
+- Python
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/rock_paper_scissors
+    ```
+2. Install required dependencies (if applicable):
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to enter your choice of Rock, Paper, or Scissors. The game will display the computer's choice and the result of each round. The player can choose to play again after each round.
+
+### Features
+- Random selection of choices for the computer.
+- Input validation for player choices.
+- Feedback on the outcome of each round.
+- Option to play multiple rounds.
+
+**Completed on**: Wednesday, July 17th, 2024 
+
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

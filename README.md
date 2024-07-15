@@ -7,7 +7,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 ## Table of Contents
 
 1. [Project 1: Mad Libs Game](#project-1-mad-libs-game)
-2. [Project 2: TBD](#project-2-tbd)
+2. [Project 2: Number Guessing Game](#project-2-number-guessing-game)
 3. [Project 3: TBD](#project-3-tbd)
 4. [Project 4: TBD](#project-4-tbd)
 5. [Project 5: TBD](#project-5-tbd)
@@ -59,7 +59,6 @@ template, creating a unique and (sometimes) funny story based on the user's inpu
 ### Technologies
 - Python
 
-
 ### Installation 
 1. Clone the repository
     ```sh
@@ -85,7 +84,53 @@ The game will display a story using the words you provided.
 - Dynamic word replacement.
 - User-friendly interface.   
 
-    
+**Completed on**: Sunday, July 14th, 2024  
+
+## Project 2: Number Guessing Game
+
+### Description
+
+The Number Guessing Game is a simple game where the player tries to guess a randomly generated number
+between a specified range (1 to 100). The player is given feedback on whether their guess is too high, 
+too low, or correct. The game continues until the player guesses the correct number or exhausts the
+maximum number of guesses. 
+
+The game also includes features to handle invalid inputs and provides and option for the player to 
+play again after each game session. 
+
+**Key Learning Points**
+- Implementing input validation. 
+- Using random number generation.
+- Handling game flow and logic for a guessing game.
+
+### Technologies
+- Python
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/number_guess
+    ```
+2. Install required dependencies (if applicable):
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to enter your guesses. The game will provide feedback after each guess
+and indicate whether the guess was too high, too low, or correct. 
+
+### Features
+- Random number generation within a specified range. 
+- Input validation for numeric and range constraints. 
+- Feedback messages for each guess. 
+- Option to play again after winning or losing.  
+
 **Completed on**: Sunday, July 14th, 2024   
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 

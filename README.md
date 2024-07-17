@@ -11,7 +11,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 3. [Project 3: Dice Simulator](#project-3-dice-simulator)
 4. [Project 4: Hangman Game](#project-4-hangman-game)
 5. [Project 5: Rock, Paper, Scissors Game](#project-5-rock-paper-scissors-game)
-6. [Project 6: TBD](#project-6-tbd)
+6. [Project 6: Password Generator](#project-6-password-generator)
 7. [Project 7: TBD](#project-7-tbd)
 8. [Project 8: TBD](#project-8-tbd)
 9. [Project 9: TBD](#project-9-tbd)
@@ -253,6 +253,51 @@ The game provides feedback on the outcome of each round and allows the player to
 1. Clone the repository
     ```sh
     git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/password_generator
+    ```
+2. Install required dependencies (if applicable):
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to enter the number of passwords you want to generate. The application will
+display the generated passwords after ensuring they are valid. The user can choose to generate more passwords
+or exit the application. 
+
+### Features
+- Random password generation within a specified range. 
+- Input validation for numeric and range constraints. 
+- Ensure passwords contain a mix of uppercase, lowercase, digits, and special characters. 
+- Option to generate multiple sets of passwords.
+
+**Completed on**: Wednesday, July 17th, 2024 
+
+## Project 6: Password Generator
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Password Generator module generates random passwords for the user. It allows the user to generate between (1) and (5)
+passwords at a time, with each password being between (8) and (15) characters. The module ensures that the generated passwords
+contain a mix of uppercase letters, lowercase letters, numbers, and special characters. 
+
+**Key Learning Points**
+- Generating random passwords with a mix of character types.
+- Validating user input for the number of passwords and their length. 
+- Ensuring validated passwords meet common security requirements. 
+
+### Technologies
+- Python
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
     cd thirty_great_python_projects/rock_paper_scissors
     ```
 2. Install required dependencies (if applicable):
@@ -274,7 +319,6 @@ Follow the on-screen instructions to enter your choice of Rock, Paper, or Scisso
 - Option to play multiple rounds.
 
 **Completed on**: Wednesday, July 17th, 2024 
-
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

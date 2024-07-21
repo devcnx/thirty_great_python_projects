@@ -12,7 +12,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 4. [Project 4: Hangman Game](#project-4-hangman-game)
 5. [Project 5: Rock, Paper, Scissors Game](#project-5-rock-paper-scissors-game)
 6. [Project 6: Password Generator](#project-6-password-generator)
-7. [Project 7: TBD](#project-7-tbd)
+7. [Project 7: QR Code Generator](#project-7-qr-code-generator)
 8. [Project 8: TBD](#project-8-tbd)
 9. [Project 9: TBD](#project-9-tbd)
 10. [Project 10: TBD](#project-10-tbd)
@@ -319,6 +319,52 @@ Follow the on-screen instructions to enter your choice of Rock, Paper, or Scisso
 - Option to play multiple rounds.
 
 **Completed on**: Wednesday, July 17th, 2024 
+
+## Project 7: QR Code Generator
+[Back to Top](#table-of-contents)
+
+### Description
+
+The QR Code Generator application allows users to generate QR codes for any input text or URL.
+The generated QR codes can be saved as image files (PNG) for later use. This project demonstrates
+how to work with external libraries in Python to create and manipulate images.
+
+**Key Learning Points**
+- Generating QR codes using Python libraries. 
+- Handling user inputs and validations. 
+- Saving generated QR codes as image files. 
+
+### Technologies
+- Python
+- qrcode (Python library)
+- Pillow (Python Imaging Library)
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/qr_code_generator
+    ```
+2. Install required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+Follow the on-screen instructions to enter the text or URL you want to generate a QR code for. 
+The application will displayed the generated QR code and save it as an image file. 
+
+### Features
+- Input validation for text/URL. 
+- QR code generation. 
+- Saving QR codes as image files. 
+- User-friendly interface.
+
+**Completed on**: Friday, July 19th, 2024
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

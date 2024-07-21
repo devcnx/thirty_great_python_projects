@@ -13,7 +13,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 5. [Project 5: Rock, Paper, Scissors Game](#project-5-rock-paper-scissors-game)
 6. [Project 6: Password Generator](#project-6-password-generator)
 7. [Project 7: QR Code Generator](#project-7-qr-code-generator)
-8. [Project 8: TBD](#project-8-tbd)
+8. [Project 8: Website Checker](#project-8-website-checker)
 9. [Project 9: TBD](#project-9-tbd)
 10. [Project 10: TBD](#project-10-tbd)
 11. [Project 11: TBD](#project-11-tbd)
@@ -364,7 +364,57 @@ The application will displayed the generated QR code and save it as an image fil
 - Saving QR codes as image files. 
 - User-friendly interface.
 
-**Completed on**: Friday, July 19th, 2024
+**Completed on**: Sunday, July 21st, 2024
+
+## Project 8: Website Checker
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Website Checker application allows users to check the status of websites. The user can enter a
+list of websites in a CSV file, and the website checker will check the status of each website and
+print the results to the console. This project demonstrates how to work with external libraries
+in Python to: create and manipulate files, read and write CSV files, and send HTTP requests. 
+
+**Key Learning Points**
+- Checking website status using Python libraries. 
+- Reading from CSV files. 
+- Sending HTTP requests. 
+
+### Technologies
+- Python
+- csv (Python Library)
+- os (Python Library)
+- requests (Python Library)
+- fake_useragent (Python Library)
+- http (Python Library)
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/website_checker
+    ```
+2. Install required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+(If applicable) Enter the list of websites in a CSV file. The website checker will check the status
+of each website and print the results to the console. 
+
+### Features
+- Reading from CSV files.
+- Sending HTTP requests. 
+- User-friendly console interface.
+
+**Completed on**: Sunday, July 21st, 2024
+
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

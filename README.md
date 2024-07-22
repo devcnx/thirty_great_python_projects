@@ -14,7 +14,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 6. [Project 6: Password Generator](#project-6-password-generator)
 7. [Project 7: QR Code Generator](#project-7-qr-code-generator)
 8. [Project 8: Website Checker](#project-8-website-checker)
-9. [Project 9: TBD](#project-9-tbd)
+9. [Project 9: Password Checker](#project-9-password-checker)
 10. [Project 10: TBD](#project-10-tbd)
 11. [Project 11: TBD](#project-11-tbd)
 12. [Project 12: TBD](#project-12-tbd)
@@ -414,6 +414,53 @@ of each website and print the results to the console.
 - User-friendly console interface.
 
 **Completed on**: Sunday, July 21st, 2024
+
+## Project 9: Password Checker
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Password Checker application allows users to check if their password is considered a common
+password. The user can enter a password and the application will tell the user if the password is
+considered common based on if it's located in a list of common passwords. This project demonstrates
+working with reading files (.txt) in Python and working with user inputs and validations. 
+
+**Key Learning Points**
+- Checking if a password is common against a list of common passwords. 
+- Handling user inputs and validations.
+- Reading from files.
+
+### Technologies
+- Python
+- os (Python Library)
+
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/password_checker
+    ```
+2. Install required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+The user is prompted to enter their password. The application will tell the user if the password is
+considered common based on if it's located in a list of common passwords. The user has the ability
+to continue checking passwords until they want to exit the application.
+
+### Features
+- Reading from files.
+- Handling user inputs and validations.
+- User-friendly console interface.
+
+**Completed on**: Monday, July 22nd, 2024
 
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 

@@ -15,7 +15,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 7. [Project 7: QR Code Generator](#project-7-qr-code-generator)
 8. [Project 8: Website Checker](#project-8-website-checker)
 9. [Project 9: Password Checker](#project-9-password-checker)
-10. [Project 10: TBD](#project-10-tbd)
+10. [Project 10: Brute Force](#project-10-brute-force)
 11. [Project 11: TBD](#project-11-tbd)
 12. [Project 12: TBD](#project-12-tbd)
 13. [Project 13: TBD](#project-13-tbd)
@@ -462,6 +462,57 @@ to continue checking passwords until they want to exit the application.
 
 **Completed on**: Monday, July 22nd, 2024
 
+## Project 10: Brute Force
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Brute Force application is used to crack passwords. This application is for educational purposes only. The project demonstrates working with reading files (.txt), working with the itertools library,
+and threads to run the application in parallel. 
+
+**Key Learning Points**
+- Generating all possible combinations of characters using the itertools library. 
+- Scrambling characters to generate random words. 
+- Checking for common matches in a list of words. 
+- Implementing brute force login to crack passwords. 
+- Using threading to run multiple brute force attempts in parallel. 
+- Calculating potential number of combinations for tracking progress. 
+
+### Technologies
+- Python
+- itertools (Python Library)
+- threading (Python Library)
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/brute_force
+    ```
+2. Install required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+The application selects a random word from a list of words. It scrambles the word and then checks for
+common matches. It performs brute force attacks until it finds the correct password. There is no
+user input for the console application. 
+
+### Features
+- Reading from files. 
+- Scrambling characters. 
+- Checking for common matches.
+- User-friendly console interface.
+- Implementing brute force logic. 
+- Using threading to run multiple brute force attempts in parallel. 
+- Calculating potential number of combinations for tracking progress.
+
+**Completed on**: Sunday, July 28th, 2024
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

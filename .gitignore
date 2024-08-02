@@ -55,3 +55,4 @@ Desktop.ini
 *.swp
 *.swo
 *.tmp
+venv/

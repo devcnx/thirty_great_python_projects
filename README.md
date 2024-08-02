@@ -16,7 +16,7 @@ This repository contains projects from the Udemy course "30 Great Python Project
 8. [Project 8: Website Checker](#project-8-website-checker)
 9. [Project 9: Password Checker](#project-9-password-checker)
 10. [Project 10: Brute Force](#project-10-brute-force)
-11. [Project 11: TBD](#project-11-tbd)
+11. [Project 11: Image Downloader](#project-11-image-downloader)
 12. [Project 12: TBD](#project-12-tbd)
 13. [Project 13: TBD](#project-13-tbd)
 14. [Project 14: TBD](#project-14-tbd)
@@ -79,12 +79,6 @@ template, creating a unique and (sometimes) funny story based on the user's inpu
 Follow the on-screen instructions to enter various types of words (nouns, verbs, adjectives, etc.). 
 The game will display a story using the words you provided. 
 
-### Features
-- Interactive word prompts. 
-- Multiple story templates. 
-- Dynamic word replacement.
-- User-friendly interface.   
-
 **Completed on**: Sunday, July 14th, 2024  
 
 ## Project 2: Number Guessing Game
@@ -127,12 +121,6 @@ play again after each game session.
 Follow the on-screen instructions to enter your guesses. The game will provide feedback after each guess
 and indicate whether the guess was too high, too low, or correct. 
 
-### Features
-- Random number generation within a specified range. 
-- Input validation for numeric and range constraints. 
-- Feedback messages for each guess. 
-- Option to play again after winning or losing.  
-
 **Completed on**: Sunday, July 14th, 2024  
 
 ## Project 3: Dice Simulator
@@ -170,11 +158,6 @@ practice working with random numbers and user input.
 ### Usage
 Follow the on-screen instructions to enter the number of dice to roll. The game will display the results of the dice
 rolls, and the total (sum) of the rolls. Type 'exit' to quit the game.
-
-### Features
-- Random dice roll generation.
-- User-friendly interface with input validation. 
-- Continuous play option.
 
 **Completed on**: Monday, July 15th, 2024 
 
@@ -221,12 +204,6 @@ Follow the on-screen instructions to guess the letters of the word. The game wil
 each guess, indicating whether the letter is correct or incorrect. The player can choose to play again
 after each game session.
 
-### Features
-- Random word selection from a list. 
-- Input validation for single letters. 
-- Display of word state and guessed letters. 
-- Option to play again after each game.
-
 **Completed on**: Monday, July 15th, 2024
 
 ## Project 5: Rock, Paper, Scissors Game
@@ -269,12 +246,6 @@ Follow the on-screen instructions to enter the number of passwords you want to g
 display the generated passwords after ensuring they are valid. The user can choose to generate more passwords
 or exit the application. 
 
-### Features
-- Random password generation within a specified range. 
-- Input validation for numeric and range constraints. 
-- Ensure passwords contain a mix of uppercase, lowercase, digits, and special characters. 
-- Option to generate multiple sets of passwords.
-
 **Completed on**: Wednesday, July 17th, 2024 
 
 ## Project 6: Password Generator
@@ -311,12 +282,6 @@ contain a mix of uppercase letters, lowercase letters, numbers, and special char
 
 ### Usage
 Follow the on-screen instructions to enter your choice of Rock, Paper, or Scissors. The game will display the computer's choice and the result of each round. The player can choose to play again after each round.
-
-### Features
-- Random selection of choices for the computer.
-- Input validation for player choices.
-- Feedback on the outcome of each round.
-- Option to play multiple rounds.
 
 **Completed on**: Wednesday, July 17th, 2024 
 
@@ -357,12 +322,6 @@ how to work with external libraries in Python to create and manipulate images.
 ### Usage
 Follow the on-screen instructions to enter the text or URL you want to generate a QR code for. 
 The application will displayed the generated QR code and save it as an image file. 
-
-### Features
-- Input validation for text/URL. 
-- QR code generation. 
-- Saving QR codes as image files. 
-- User-friendly interface.
 
 **Completed on**: Sunday, July 21st, 2024
 
@@ -408,11 +367,6 @@ in Python to: create and manipulate files, read and write CSV files, and send HT
 (If applicable) Enter the list of websites in a CSV file. The website checker will check the status
 of each website and print the results to the console. 
 
-### Features
-- Reading from CSV files.
-- Sending HTTP requests. 
-- User-friendly console interface.
-
 **Completed on**: Sunday, July 21st, 2024
 
 ## Project 9: Password Checker
@@ -455,11 +409,6 @@ The user is prompted to enter their password. The application will tell the user
 considered common based on if it's located in a list of common passwords. The user has the ability
 to continue checking passwords until they want to exit the application.
 
-### Features
-- Reading from files.
-- Handling user inputs and validations.
-- User-friendly console interface.
-
 **Completed on**: Monday, July 22nd, 2024
 
 ## Project 10: Brute Force
@@ -467,8 +416,7 @@ to continue checking passwords until they want to exit the application.
 
 ### Description
 
-The Brute Force application is used to crack passwords. This application is for educational purposes only. The project demonstrates working with reading files (.txt), working with the itertools library,
-and threads to run the application in parallel. 
+The Brute Force application is used to crack passwords. This application is for educational purposes only. The project demonstrates working with reading files (.txt), working with the itertools library, and threads to run the application in parallel. 
 
 **Key Learning Points**
 - Generating all possible combinations of characters using the itertools library. 
@@ -503,16 +451,49 @@ The application selects a random word from a list of words. It scrambles the wor
 common matches. It performs brute force attacks until it finds the correct password. There is no
 user input for the console application. 
 
-### Features
-- Reading from files. 
-- Scrambling characters. 
-- Checking for common matches.
-- User-friendly console interface.
-- Implementing brute force logic. 
-- Using threading to run multiple brute force attempts in parallel. 
-- Calculating potential number of combinations for tracking progress.
-
 **Completed on**: Sunday, July 28th, 2024
+
+## Project 11: Image Downloader
+[Back to Top](#table-of-contents)
+
+### Description
+
+The Image Downloader application is used to download images. The project demonstrates how to
+work with the requests library and validate user inputs (image URLs). 
+
+**Key Learning Points**
+- Making HTTP GET requests. 
+- Handling user inputs and validations. 
+- Saving downloaded images to a directory.
+
+### Technologies
+- Python
+- requests (Python Library)
+
+### Installation 
+1. Clone the repository
+    ```sh
+    git clone https://github.com/devcnx/thirty_great_python_projects.git
+    cd thirty_great_python_projects/image_downloader
+    ```
+2. Install required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Run the project:
+    ```sh
+    python3 main.py
+    ```
+
+### Usage
+The user is prompted to enter a URL for an image. The application checks if the URL is valid by
+making sure it starts with 'http://' or 'https://', and that it contains a valid image file type
+('.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico'). If the URL is valid, the application
+downloads it and saves it to a specified directory. 
+
+TODO: Update application to validate that the directory exists. 
+
+**Completed on**: Friday, August 2nd, 2024
 
 More projects from "30 Great Python Projects to Help You Master It In 2024" (Udemy) will be added as they are completed. 
 

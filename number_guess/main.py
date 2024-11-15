@@ -11,6 +11,7 @@ The application also imports the NUMBER_RANGE constant from the constants module
 that the player can guess from, and the MAX_GUESSES constant, which defines the maximum number of guesses the player
 has to guess the correct number.
 """
+
 from constants import MAX_GUESSES, NUMBER_RANGE
 from random import randint
 
@@ -26,7 +27,7 @@ def display_welcome() -> str:
         The welcome message to the player.
         :rtype: str
     """
-    return f'''
+    return f"""
     Welcome to the Number Guessing Game!
 
     In this game, you have to guess a number between {NUMBER_RANGE[0]} and {NUMBER_RANGE[1]}. The game will provide
@@ -35,7 +36,7 @@ def display_welcome() -> str:
     maximum number of guesses, you lose :(.
 
     Let's get started!
-    '''
+    """
 
 
 def is_valid_input(user_input: str) -> bool:
@@ -53,7 +54,7 @@ def is_valid_input(user_input: str) -> bool:
         A boolean value indicating whether the user's input is valid.
         :rtype: bool
     """
-    return user_input != '' and user_input is not None
+    return user_input != "" and user_input is not None
 
 
 def is_valid_int(user_input: str) -> bool:
@@ -109,13 +110,13 @@ def validate_user_input(prompt: str, validation_func: callable) -> str:
     This function is used to validate the user's input based on the specified validation function. It prompts the user
     to enter their input and continues to prompt the user until the input passes the validation function. The function
     takes two parameters, prompt, which is the message displayed to the user, and validation_func, which is the function
-    used to validate the user's input. The function returns the user's input once it passes the validation function. 
+    used to validate the user's input. The function returns the user's input once it passes the validation function.
 
     Parameters:
-        prompt: The message displayed to the user. 
+        prompt: The message displayed to the user.
         :type prompt: str
 
-        validation_func: The function used to validate the user's input. 
+        validation_func: The function used to validate the user's input.
         :type validation_func: callable
 
     Returns:
@@ -130,7 +131,8 @@ def validate_user_input(prompt: str, validation_func: callable) -> str:
             print(f'{" " * 2}*** Invalid Input. Please Enter a Valid Integer.')
         elif not is_valid_int_in_range(user_input):
             print(
-                f'{" " * 2}*** Invalid Guess. Please Enter a Number Between ({NUMBER_RANGE[0]}) and ({NUMBER_RANGE[1]}).')
+                f'{" " * 2}*** Invalid Guess. Please Enter a Number Between ({NUMBER_RANGE[0]}) and ({NUMBER_RANGE[1]}).'
+            )
         user_input = input(prompt)
     return user_input
 
@@ -193,11 +195,11 @@ def provide_feedback(guess: int, target: int) -> str:
         :rtype: str
     """
     if guess < target:
-        return 'Too Low!'
+        return "Too Low!"
     elif guess > target:
-        return 'Too High!'
+        return "Too High!"
     else:
-        return 'Congratulations! You guessed the correct number!'
+        return "Congratulations! You guessed the correct number!"
 
 
 def track_number_of_guesses(guesses: int) -> int:
@@ -237,7 +239,7 @@ def is_game_over(guesses: int) -> bool:
 
 def play_again() -> bool:
     """
-    Ask the player if they want to play again. 
+    Ask the player if they want to play again.
 
     This function prompts the player to enter whether they want to play the game again. It takes no parameters and
     returns a boolean value indicating whether the player wants to play again. If the player enters 'Y' or 'y', the
@@ -247,15 +249,17 @@ def play_again() -> bool:
     make it case-insensitive.
 
     Returns:
-        A boolean value indicating whether the player wants to play again. 
+        A boolean value indicating whether the player wants to play again.
         :rtype: bool
     """
-    prompt = 'Would You Like to Play Again? (Y/N): '
+    prompt = "Would You Like to Play Again? (Y/N): "
     user_input = validate_user_input(prompt, is_valid_input).lower()
-    while user_input not in ['y', 'n']:
-        print(f'{" " * 2}*** Invalid Input. Please Enter "Y" to Play Again or "N" to Quit.')
+    while user_input not in ["y", "n"]:
+        print(
+            f'{" " * 2}*** Invalid Input. Please Enter "Y" to Play Again or "N" to Quit.'
+        )
         user_input = validate_user_input(prompt, is_valid_input).lower()
-    return user_input == 'y'
+    return user_input == "y"
 
 
 def play_game():
@@ -277,7 +281,7 @@ def play_game():
     guesses = 0
 
     while not is_game_over(guesses):
-        prompt = f'Enter Your Guess: '
+        prompt = f"Enter Your Guess: "
         guess = validate_user_input(prompt, is_valid_input)
         if not is_valid_input(guess):
             print(f'{" " * 2}*** Invalid Input. Please Enter a Valid Integer.')
@@ -287,7 +291,8 @@ def play_game():
             continue
         elif not is_valid_int_in_range(guess):
             print(
-                f'{" " * 2}*** Invalid Guess. Please Enter a Number Between ({NUMBER_RANGE[0]}) and ({NUMBER_RANGE[1]}).')
+                f'{" " * 2}*** Invalid Guess. Please Enter a Number Between ({NUMBER_RANGE[0]}) and ({NUMBER_RANGE[1]}).'
+            )
             continue
 
         guess = int(guess)
@@ -295,13 +300,17 @@ def play_game():
 
         if is_correct_guess(guess, target):
             print(f'{" " * 2}*** {provide_feedback(guess, target)}')
-            print(f'{" " * 2}*** You Guessed the Correct Number in ({guesses}) Guesses!')
+            print(
+                f'{" " * 2}*** You Guessed the Correct Number in ({guesses}) Guesses!'
+            )
             break
 
         print(f'{" " * 2}*** {provide_feedback(guess, target)}')
 
         if is_game_over(guesses):
-            print(f'{" " * 2}*** Game Over! You Have Reached the Maximum Number of Guesses.')
+            print(
+                f'{" " * 2}*** Game Over! You Have Reached the Maximum Number of Guesses.'
+            )
             print(f'{" " * 2}*** The Correct Number Was ({target}).')
             break
 
@@ -310,9 +319,9 @@ def play_game():
     if play_again():
         play_game()
     else:
-        print('Thanks for Playing! Goodbye!')
+        print("Thanks for Playing! Goodbye!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(display_welcome())
     play_game()

@@ -1,7 +1,7 @@
 import os
 
 MESSAGES = {
-    'welcome': f'''
+    "welcome": f"""
 
     Welcome to Brute Force.
 
@@ -14,11 +14,11 @@ MESSAGES = {
 
     Let's get started!
 
-    ''',
-    'exit': f'''\nThanks for Using Brute Force! Goodbye!'''
+    """,
+    "exit": f"""\nThanks for Using Brute Force! Goodbye!""",
 }
-WORDS_FILE_PATH = os.path.join(os.path.dirname(__file__), 'files/words.txt')
-MAX_ATTEMPTS = 10 ** 8
+WORDS_FILE_PATH = os.path.join(os.path.dirname(__file__), "files/words.txt")
+MAX_ATTEMPTS = 10**8
 TIMER_SLEEP = 5
 PAUSE_INTERVAL = 10
 PAUSE_DURATION = 3

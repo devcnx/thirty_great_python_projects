@@ -1,5 +1,1 @@
-GAME_OPTIONS = {
-    'rock': 'rock',
-    'paper': 'paper',
-    'scissors': 'scissors'
-}
+GAME_OPTIONS = {"rock": "rock", "paper": "paper", "scissors": "scissors"}

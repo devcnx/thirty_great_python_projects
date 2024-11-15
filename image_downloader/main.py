@@ -4,6 +4,7 @@ Image Downloader.
 This script allows users to download images from URLs. It provides a command-line interface for users to input
 image URLs and desired file names, then downloads and saves the images to the specified directory. 
 """
+
 import os
 import requests
 from constants import MESSAGES, IMAGES_DIR, VALID_EXTENSIONS
@@ -12,7 +13,7 @@ from typing import Optional
 
 def get_user_input(prompt: str) -> str:
     """
-    Prompt the user for input and return the stripped response. 
+    Prompt the user for input and return the stripped response.
 
     Parameters:
         prompt: The prompt to display to the user.
@@ -34,7 +35,7 @@ def is_valid_url(url: str) -> bool:
         :type url: str
 
     Returns:
-        True if the URL ends with a valid image extension, False otherwise. 
+        True if the URL ends with a valid image extension, False otherwise.
         :rtype: bool
     """
     return get_extension(url) in VALID_EXTENSIONS
@@ -62,7 +63,7 @@ def get_response(url: str) -> Optional[requests.Response]:
 
 def set_protocol(url: str) -> str:
     """
-    Ensure the URL has a protocol prefix, defaulting to HTTPS if none is present. 
+    Ensure the URL has a protocol prefix, defaulting to HTTPS if none is present.
 
     Parameters:
         url: The URL to check.
@@ -72,7 +73,7 @@ def set_protocol(url: str) -> str:
         The URL with a protocol prefix, or the original URL if a protocol prefix is already present.
         :rtype: str
     """
-    return url if url.startswith(('http://', 'https://')) else f'https://{url}'
+    return url if url.startswith(("http://", "https://")) else f"https://{url}"
 
 
 def download_image(url: str, image_name: str) -> bool:
@@ -91,15 +92,15 @@ def download_image(url: str, image_name: str) -> bool:
     """
     response = get_response(url)
     if not response:
-        print(MESSAGES['invalid_url'])
+        print(MESSAGES["invalid_url"])
         return False
     try:
-        with open(os.path.join(IMAGES_DIR, image_name), 'wb') as image:
+        with open(os.path.join(IMAGES_DIR, image_name), "wb") as image:
             image.write(response.content)
-            print(MESSAGES['image_saved'])
+            print(MESSAGES["image_saved"])
             return True
     except IOError:
-        print(MESSAGES['invalid_image_ext'])
+        print(MESSAGES["invalid_image_ext"])
         return False
 
 
@@ -123,53 +124,55 @@ def get_extension(url: str) -> Optional[str]:
 
 def main() -> None:
     """
-    The main function to run the image downloader. 
+    The main function to run the image downloader.
 
     This function handles the main loop of the program, prompting the user for input, validating
-    the input, and initiating the image download process. 
+    the input, and initiating the image download process.
 
     Returns:
         None
     """
-    print(MESSAGES['welcome'])
+    print(MESSAGES["welcome"])
     while True:
-        url = get_user_input('\nEnter the URL of the Image to Download: ')
+        url = get_user_input("\nEnter the URL of the Image to Download: ")
         if not url:
-            print(MESSAGES['invalid_input'])
+            print(MESSAGES["invalid_input"])
             continue
 
         url = set_protocol(url)
 
         if not is_valid_url(url):
-            print(MESSAGES['invalid_url'])
+            print(MESSAGES["invalid_url"])
             continue
 
         extension = get_extension(url)
         if not extension:
-            print(MESSAGES['invalid_url'])
+            print(MESSAGES["invalid_url"])
             continue
 
-        image_name = get_user_input(f'Enter the Name of the File to Save ({url.split("/")[-1]}): ')
+        image_name = get_user_input(
+            f'Enter the Name of the File to Save ({url.split("/")[-1]}): '
+        )
         if not image_name:
-            print(MESSAGES['invalid_input'])
+            print(MESSAGES["invalid_input"])
             continue
-        image_name = f'{image_name}{extension}'
+        image_name = f"{image_name}{extension}"
         if download_image(url, image_name):
-            print(MESSAGES['image_downloaded'])
+            print(MESSAGES["image_downloaded"])
         else:
             continue
 
-        try_again = get_user_input(MESSAGES['try_again'])
-        if not try_again or try_again.lower() not in ['y', 'n']:
-            print(MESSAGES['invalid_input'])
+        try_again = get_user_input(MESSAGES["try_again"])
+        if not try_again or try_again.lower() not in ["y", "n"]:
+            print(MESSAGES["invalid_input"])
             continue
-        if try_again.lower() == 'n':
+        if try_again.lower() == "n":
             break
         else:
             continue
 
-    print(MESSAGES['exit'])
+    print(MESSAGES["exit"])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

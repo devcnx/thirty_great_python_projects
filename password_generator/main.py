@@ -303,7 +303,8 @@ def generate_again() -> bool:
         :rtype: bool
     """
     while True:
-        get_user_input = input('Would You Like to Generate More Passwords? (Y/N): ').lower()
+        get_user_input = input(
+            'Would You Like to Generate More Passwords? (Y/N): ').lower()
         if not is_valid_input(get_user_input):
             print(f'{" " * 2}*** Invalid. An Entry is Required.\n')
             continue
@@ -316,12 +317,13 @@ def generate_again() -> bool:
 if __name__ == '__main__':
     print(display_welcome())
     while True:
-        number_of_passwords = get_user_input('How Many Passwords Would You Like to Generate? ')
+        number_of_passwords = get_user_input(
+            'How Many Passwords Would You Like to Generate? ')
         if not is_valid_input(number_of_passwords):
             print(f'{" " * 2}*** Invalid. An Entry is Required.\n')
             continue
         if not is_valid_int_within_range(number_of_passwords, MIN_NUMBER_OF_PASSWORDS, MAX_NUMBER_OF_PASSWORDS):
-            print(f'{" " * 2}*** Invalid Input. The Number of Passwords Must Be Between ({
+            print(f'{" " * 2}*** Invalid Input. The Number of Passwords Must Be Between({
                   MIN_NUMBER_OF_PASSWORDS}) and ({MAX_NUMBER_OF_PASSWORDS}).\n')
             continue
         number_of_passwords = int(number_of_passwords)

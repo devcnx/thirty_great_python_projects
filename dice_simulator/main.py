@@ -7,6 +7,7 @@ application by typing 'exit'. This module contains functions that prompt the use
 generate a random number between (1) and (6), and display the result to the user. This module imports the random
 module to generate the random number.
 """
+
 import random
 from constants import DICE_RANGE, DEFAULT_ROLLS
 
@@ -23,7 +24,7 @@ def display_welcome() -> str:
         The welcome message and instructions for the user.
         :rtype: str
     """
-    return f'''
+    return f"""
     Welcome to the Dice Simulator!
 
     This is a dice simulator that allows you to roll a specified number of dice and get random numbers between
@@ -31,7 +32,7 @@ def display_welcome() -> str:
     exit the application by typing 'exit'.
 
     Let's get started!
-    '''
+    """
 
 
 def get_user_input(prompt: str) -> str:
@@ -68,7 +69,7 @@ def is_valid_input(user_input: str) -> bool:
     Returns:
         A boolean value indicating if the input is valid. True if the input is not empty, False otherwise.
     """
-    return user_input != ''
+    return user_input != ""
 
 
 def is_valid_int(user_input: str) -> bool:
@@ -112,7 +113,9 @@ def is_valid_int_greater_than_zero(user_input: str) -> bool:
         A boolean value of True if the input is a valid integer greater than zero, False otherwise.
         :rtype: bool
     """
-    return is_valid_input(user_input) and is_valid_int(user_input) and int(user_input) > 0
+    return (
+        is_valid_input(user_input) and is_valid_int(user_input) and int(user_input) > 0
+    )
 
 
 def generate_random_number() -> int:
@@ -186,7 +189,7 @@ def total_rolls(rolls: list[int]) -> str:
         The total of the rolls as a string.
         :rtype: str
     """
-    return f'Total: {sum(rolls)}'
+    return f"Total: {sum(rolls)}"
 
 
 def display_exit_message() -> str:
@@ -200,38 +203,40 @@ def display_exit_message() -> str:
         The exit message.
         :rtype: str
     """
-    return f'''
+    return f"""
     Thank You for Using the Dice Simulator!
     Exiting the Application...
-    '''
+    """
 
 
 def play_dice_simulator() -> None:
     """
-    Play the dice simulator. 
+    Play the dice simulator.
 
     This function is the main function that runs the dice simulator. It contains the main logic of the application,
     including prompting the user for input, validating the input, generating random numbers by rolling the dice, and
     displaying the result to the user. The function uses the helper functions defined in this module to perform these
     tasks. The function runs in a loop until the user exits the application by typing 'exit'. The function takes no
-    parameters and does not return any values. 
+    parameters and does not return any values.
 
     Returns:
         None
     """
     print(display_welcome())
     while True:
-        user_input = get_user_input('Enter the Number of Dice to Roll: ')
-        if user_input.lower() == 'exit':
+        user_input = get_user_input("Enter the Number of Dice to Roll: ")
+        if user_input.lower() == "exit":
             print(display_exit_message())
             break
         if not is_valid_int_greater_than_zero(user_input):
-            print(f'{" " * 2}*** Invalid Input! Please Enter a Valid Integer Greater Than Zero.')
+            print(
+                f'{" " * 2}*** Invalid Input! Please Enter a Valid Integer Greater Than Zero.'
+            )
             continue
         rolls = roll_dice(int(user_input))
         print(display_result(rolls))
         print(total_rolls(rolls))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     play_dice_simulator()

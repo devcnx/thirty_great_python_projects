@@ -13,6 +13,7 @@ guesses reduce the number of attempts remaining. The game ends when the player w
 displayed to the player. The player can choose to play again or exit the game. The module imports the choice function
 from the random module to select a random word from the list of words, stored in the WORDS constant.
 """
+
 from random import choice
 from constants import WORDS, MAX_ATTEMPTS
 
@@ -64,7 +65,7 @@ def is_valid_input(user_input: str) -> bool:
         A boolean value indicating whether the input is valid.
         :rtype: bool
     """
-    return user_input != ''
+    return user_input != ""
 
 
 def is_valid_guess(guess: str) -> bool:
@@ -108,12 +109,12 @@ def display_word(word: str, guessed_letters: set) -> str:
         The word with underscores for missing letters.
         :rtype: str
     """
-    return ''.join(char if char in guessed_letters else '_' for char in word)
+    return "".join(char if char in guessed_letters else "_" for char in word)
 
 
 def display_game_state(word: str, guessed_letters: set, attempts: int) -> None:
     """
-    Display the current state of the game. 
+    Display the current state of the game.
 
     This function displays the current state of the game, including the word with underscores for missing letters, the
     letters that have been guessed so far, the number of attempts remaining, and a blank like to separate the output
@@ -121,13 +122,13 @@ def display_game_state(word: str, guessed_letters: set, attempts: int) -> None:
     parameter contains the word to be guessed, the guessed_letters parameter is a set containing the letters that have
     been guessed so far, and the attempts parameter is an integer representing the number of attempts remaining. The
     function displays the word with underscores for missing letters, the guessed letters separated by commas, and the
-    number of attempts remaining. The function does not return a value. It only displays the game state to the user. 
+    number of attempts remaining. The function does not return a value. It only displays the game state to the user.
 
     Parameters:
-        word: The word to be guessed. 
+        word: The word to be guessed.
         :type word: str
 
-        guessed_letters: The letters that have been guessed so far. 
+        guessed_letters: The letters that have been guessed so far.
         :type guessed_letters: set
 
         attempts: The number of attempts remaining.
@@ -136,38 +137,38 @@ def display_game_state(word: str, guessed_letters: set, attempts: int) -> None:
     Returns:
         None
     """
-    print(f'Word: {display_word(word, guessed_letters)}')
+    print(f"Word: {display_word(word, guessed_letters)}")
     print(f'Guessed Letters: {", ".join(sorted(guessed_letters))}')
-    print(f'Attempts Remaining: {attempts}')
+    print(f"Attempts Remaining: {attempts}")
     print()
 
 
 def play_again() -> bool:
     """
-    Ask the user if they want to play again. 
+    Ask the user if they want to play again.
 
     This function prompts the user to enter a value to indicate whether they want to play the game again. The function
     returns True if the user wants to play again and False otherwise. The function displays a message to the user
     requesting input and reads the input provided by the user. The function checks if the input is valid and returns
     True if the input is 'Y' or 'y' and False if the input is 'N' or 'n'. If the input provided by the user is not
     valid, the function displays an error message and prompts the user to enter a valid input. The function continues to
-    prompt the user until a valid input is provided. 
+    prompt the user until a valid input is provided.
 
     Returns:
-        A boolean value indicating whether the user wants to play again. 
+        A boolean value indicating whether the user wants to play again.
         :rtype: bool
     """
     while True:
-        play_again = get_user_input('Play Again? (Y/N): ').lower()
-        if play_again not in ['y', 'n']:
+        play_again = get_user_input("Play Again? (Y/N): ").lower()
+        if play_again not in ["y", "n"]:
             print(f'{" " * 2}*** Invalid Input. Please Enter Y or N.\n')
             continue
-        return play_again == 'y'
+        return play_again == "y"
 
 
 def play_hangman() -> None:
     """
-    Play the Hangman game. 
+    Play the Hangman game.
 
     This function implements the Hangman game. The function displays a welcome message to the user and starts the game
     loop. The game loop continues until the user chooses to exit the game. The function selects a random word from the
@@ -181,19 +182,19 @@ def play_hangman() -> None:
     user has run out of attempts, the function displays a message indicating that the user has lost the game. The
     function prompts the user to play again and continues the game loop if the user chooses to play again, picking
     another random word. The function displays a thank you message when the user chooses to exit the game. The function
-    takes no parameters and does not return a value. 
+    takes no parameters and does not return a value.
 
     Returns:
         None
     """
-    print(f'\nWelcome to Hangman!\n')
+    print(f"\nWelcome to Hangman!\n")
     while True:
         word = get_word()
         guessed_letters = set()
         attempts = MAX_ATTEMPTS
         while True:
             display_game_state(word, guessed_letters, attempts)
-            guess = get_user_input('Enter a Letter: ').lower()
+            guess = get_user_input("Enter a Letter: ").lower()
             if not is_valid_input(guess):
                 print(f'{" " * 2}*** Invalid. Please Enter a Letter.\n')
                 continue
@@ -211,16 +212,16 @@ def play_hangman() -> None:
                 attempts -= 1
             if set(word) <= guessed_letters:
                 display_game_state(word, guessed_letters, attempts)
-                print(f'Congratulations! You Guessed the Word: {word.upper()}')
+                print(f"Congratulations! You Guessed the Word: {word.upper()}")
                 break
             if attempts == 0:
                 display_game_state(word, guessed_letters, attempts)
-                print(f'Out of Attempts! The Word was: {word.upper()}')
+                print(f"Out of Attempts! The Word was: {word.upper()}")
                 break
         if not play_again():
             break
-    print(f'\nThanks for Playing Hangman!\n')
+    print(f"\nThanks for Playing Hangman!\n")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     play_hangman()

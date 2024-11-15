@@ -58,7 +58,8 @@ def get_user_input(prompt: str) -> str:
     """
     user_input = input(prompt).strip()
     while not is_valid_input(user_input):
-        user_input = input(f'{" " * 2}*** Invalid Input. Please Try Again...\n\n{prompt}').strip()
+        user_input = input(
+            f'{" " * 2}*** Invalid Input. Please Try Again...\n\n{prompt}').strip()
     return user_input
 
 
@@ -121,19 +122,20 @@ def fill_story_template(template: str, word_types: list) -> str:
     for base_word_type, count in word_count.items():
         formatted_word_type = format_word_type(base_word_type)
         while True:
-            words = get_user_input(f'Enter ({count}) {formatted_word_type}{
+            words = get_user_input(f'Enter({count}) {formatted_word_type}{
                                    "s" if count > 1 else ""}: ')
             word_list = [word.strip() for word in words.split(',')]
             if len(word_list) == count:
                 user_words[base_word_type] = word_list
                 break
             else:
-                print(f'{" " * 2}*** Invalid Input. Please Enter ({count}) {formatted_word_type}{"s" if count >
+                print(f'{" " * 2}*** Invalid Input. Please Enter({count}) {formatted_word_type}{"s" if count >
                       1 else ""} Separated by Commas...\n')
 
     for word_type in word_types:
         base_word_type = word_type.rsplit('_', 1)[0]
-        template = template.replace(f'{{{word_type}}}', user_words[base_word_type].pop(0), 1)
+        template = template.replace(
+            f'{{{word_type}}}', user_words[base_word_type].pop(0), 1)
 
     return template
 
@@ -200,7 +202,8 @@ if __name__ == '__main__':
     while True:
         story = get_random_story()
         display_story(story)
-        play_again = input('Would you like to play again? (Y/N): ').strip().lower()
+        play_again = input(
+            'Would you like to play again? (Y/N): ').strip().lower()
         if play_again != 'y':
             break
         print(f'\nThanks for playing! Goodbye!\n')
